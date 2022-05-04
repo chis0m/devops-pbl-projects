@@ -93,3 +93,39 @@ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/met
 
 
 **Visit your public ip on the browser**
+
+
+## Enable php on the website
+
+#### change order of index files in dir.conf
+
+```bash
+sudo vim /etc/apache2/mods-enabled/dir.conf
+```
+
+```apache
+<IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+```
+
+```bash
+sudo systemctl reload apache2
+```
+
+#### create an index.php to test
+```bash
+vim /var/www/projectlamp/index.php
+```
+
+**paste the following**
+
+```php
+<?php
+phpinfo();
+```
+
+**Visit your public ip on the browser and see a list of php config**
