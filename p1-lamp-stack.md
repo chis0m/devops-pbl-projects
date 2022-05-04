@@ -1,8 +1,7 @@
-# LAMP STACK IMPLEMENTATION
-
+# LAMP STACK IMPLEMENTATION (Linux, Apache, MySQL, PHP)
 #### Project 1
 
-Requirement
+##### Requirement
 - Provision an Ubuntu server with AWS EC2 instance or any other VM of choice
 - SSH into server through local terminal or cloudshell
 
@@ -74,6 +73,9 @@ sudo vi /etc/apache2/sites-available/projectlamp.conf
 
 #### enable the configuration
 ```bash
+# first check if config is correct
+sudo apache2ctl configtest
+
 sudo a2ensite projectlamp
 
 # disable the default config
