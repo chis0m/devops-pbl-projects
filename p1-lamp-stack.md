@@ -130,4 +130,12 @@ vim /var/www/projectlamp/index.php
 phpinfo();
 ```
 
-**Visit your public ip on the browser and see a list of php config**
+Or replace with
+
+```text
+Hello World - project 1 - Hosting a LAMP Stack
+```
+
+**Visit your public ip on the browser and you should see**
+
+![](/images/p1_lamp_stack_page.png)
