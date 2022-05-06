@@ -214,3 +214,7 @@ try {
 ```http
 http://<Public_domain_or_IP>/todo_list.php
 ```
+
+**You should get**
+
+![](images/p2_todo_list_page.png)
