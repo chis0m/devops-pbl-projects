@@ -25,7 +25,7 @@ sudo apt upgrade -y
 
 # Install NodeJs
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 ```
@@ -84,7 +84,7 @@ node index.js
 
 #### Edit inbound rules of your security group
 To see the application in your browser, you go to your AWS console and edit the **inbound rules** of your **security group** to allow port 5000
-![]('/../images/security_group_configuration.png)
+![](/images/security_group_configuration.png)
 
 
 ## Add Features to Todo Project
