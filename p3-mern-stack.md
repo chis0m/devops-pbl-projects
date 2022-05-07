@@ -656,4 +656,4 @@ npm run dev
 ```
 **You should get this**
 
-![](/images/mern_todo_page.png)
+![](/images/p3_mern_project.png)
