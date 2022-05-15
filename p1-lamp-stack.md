@@ -1,10 +1,11 @@
 # LAMP STACK IMPLEMENTATION (Linux, Apache, MySQL, PHP)
+
 #### Project 1
 
 ##### Requirement
+
 - Provision an Ubuntu server with AWS EC2 instance or any other VM of choice
 - SSH into server through local terminal or cloudshell
-
 
 ## Update and Installation
 
@@ -19,8 +20,8 @@ sudo systemctl status apache2
 
 ```
 
-
 #### Install MySQL
+
 ```bash
 sudo apt install mysql-server
 
@@ -28,16 +29,16 @@ sudo apt install mysql-server
 sudo mysql_secure_installation
 ```
 
-
 #### Install PHP
+
 This will install the ubuntu default php version
+
 ```bash
 sudo apt install php libapache2-mod-php php-mysql
 
 # check php version
 php -v
 ```
-
 
 ## Create Virtual host for your website
 
@@ -50,7 +51,6 @@ sudo mkdir /var/www/projectlamp
 sudo chown -R $USER:$USER /var/www/projectlamp
 ```
 
-
 #### create apache config file for your website
 
 ```bash
@@ -58,6 +58,7 @@ sudo vi /etc/apache2/sites-available/projectlamp.conf
 ```
 
 #### paste the vhost config and save
+
 ```apache
 
 <VirtualHost *:80>
@@ -72,6 +73,7 @@ sudo vi /etc/apache2/sites-available/projectlamp.conf
 ```
 
 #### enable the configuration
+
 ```bash
 # first check if config is correct
 sudo apache2ctl configtest
@@ -85,7 +87,6 @@ sudo a2dissite 000-default
 sudo systemctl reload apache2
 ```
 
-
 #### create index.html file to test
 
 ```bash
@@ -93,9 +94,7 @@ sudo systemctl reload apache2
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 ```
 
-
 **Visit your public ip on the browser**
-
 
 ## Enable php on the website
 
@@ -119,6 +118,7 @@ sudo systemctl reload apache2
 ```
 
 #### create an index.php to test
+
 ```bash
 vim /var/www/projectlamp/index.php
 ```
