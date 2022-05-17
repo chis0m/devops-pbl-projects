@@ -84,7 +84,7 @@ node index.js
 
 #### Edit inbound rules of your security group
 To see the application in your browser, you go to your AWS console and edit the **inbound rules** of your **security group** to allow port 5000
-![](/images/security_group_configuration.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/security_group_configuration.png)
 
 
 ## Add Features to Todo Project
@@ -281,11 +281,11 @@ You should get: *Database connected successfully*
 Images are added below
 
 Set Headers
-![](images/p3_postman_header.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p3_postman_header.png)
 Make Post Request
-![](images/p3_mern_post_request.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p3_mern_post_request.png)
 Make A Get Request
-![](images/p3_mern_get_request.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p3_mern_get_request.png)
 
 ## Frontend Creation
 
@@ -323,7 +323,7 @@ cd client
 nano package.json
 ```
 **add "proxy": "http://localhost:5000" at the end**
-![](images/proxy_backend.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/proxy_backend.png)
 
 #### start the application
 ```bash
@@ -656,4 +656,4 @@ npm run dev
 ```
 **You should get this**
 
-![](/images/p3_mern_project.png)
+![](/https://soms-public-assets.s3.amazonaws.com/images/p3_mern_project.png)

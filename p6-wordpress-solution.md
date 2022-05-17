@@ -8,14 +8,14 @@
 2. On the security group of wordpress web server, allow port 80 from anywhere
 3. On the security group of database server, allow port 3306 from the private ip of the webserver.
 
-![](images/p6_two_servers.png)
-![](images/p6_wordpress_server_sg.png)
-![](images/p6_database_sg.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p6_two_servers.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p6_wordpress_server_sg.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p6_database_sg.png)
 
 #### Attach New Drives
 
 1. For each instance, create at least 2 volumes of atleast 10g and attach to each instance. volumes a to f.
-![](images/p6_volumes.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p6_volumes.png)
 
 #### Create Partitions on newly attached disks
 
@@ -310,4 +310,4 @@ define( 'DB_COLLATE', '' );
 http://<Web-Server-Public-IP-Address>/wordpress/
 ```
 
-![](images/p6_wordpress_solution.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p6_wordpress_solution.png)

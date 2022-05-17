@@ -256,9 +256,9 @@ node server.js
 
 #### Edit inbound rules of your security group
 To see the application in your browser, you go to your AWS console and edit the **inbound rules** of your **security group** to allow port 3300
-![](/images/p4_security_group.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p4_security_group.png)
 
 
 **Visit your public domain to see**
 
-![](/images/p4_mean_stack.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p4_mean_stack.png)

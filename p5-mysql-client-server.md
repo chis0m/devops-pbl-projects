@@ -4,12 +4,12 @@
 
 #### setup instances for the mysql client and server
 
-![](images/mysql_client_server.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/mysql_client_server.png)
 
 #### setup security group for mysql server
 
 allow port 3306 and private ip of the client
-![](images/mysql_server_sg.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/mysql_server_sg.png)
 
 #### install mysql-server in server instance
 
@@ -35,4 +35,4 @@ sudo apt install mysql-client
 ```
 
 #### connect to the mysql server using its private ip
-![](images/mysql_server_client_connection.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/mysql_server_client_connection.png)
