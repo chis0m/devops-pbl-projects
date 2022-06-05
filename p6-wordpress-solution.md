@@ -67,6 +67,7 @@ sudo lvcreate -n logs-lv -L 14G webdata-vg                              # create
 sudo lsblk                                                                   
 sudo mkfs -t ext4 /dev/webdata-vg/apps-lv                               # format logical volumes
 sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+sudo lsblk -f                                                           # list disks, volumes with formatting
 ```
 
 #### create mount points
@@ -84,6 +85,10 @@ sudo rsync -av /home/recovery/logs/. /var/log                           # recove
 ```
 
 #### Add logical volumes mount to fstab, like so
+```bash
+sudo blkid                                                              # get UUID of volumes
+```
+Note: you can use the uuid of volumes or use the path
 
 ```bash
 UUID=ff8f80fc-0119-49a4-9445-98d1f1b0dc05       /       xfs     defaults        0       0
@@ -200,7 +205,7 @@ sudo yum install mysql
 
 ```bash
 sudo yum update
-sudo yum install mysql-server
+sudo yum install mysql-server -y
 
 sudo systemctl restart mysqld
 sudo systemctl enable mysqld
@@ -210,12 +215,13 @@ sudo mysql                                                              # create
 
 ```sql
 sudo mysql
-CREATE DATABASE wordpress;
-CREATE USER `wordpress`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'wordpress';
-GRANT ALL ON wordpress.* TO 'wordpress'@'<Web-Server-Private-IP-Address>';
-FLUSH PRIVILEGES;
-SHOW DATABASES;
-exit
+
+mysql> CREATE DATABASE wordpress;
+mysql> CREATE USER `wordpress`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'wordpress';
+mysql> GRANT ALL ON wordpress.* TO 'wordpress'@'<Web-Server-Private-IP-Address>';
+mysql> FLUSH PRIVILEGES;
+mysql> SHOW DATABASES;
+mysql> exit
 ```
 
 ### Access DB from webserver
