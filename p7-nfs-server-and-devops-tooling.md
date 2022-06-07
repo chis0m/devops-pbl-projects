@@ -216,6 +216,8 @@ mysql> INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`, 
 
 #### Visit website from two servers created
 
+1. Server 1 -  75.101.234.61
 ![](https://soms-public-assets.s3.amazonaws.com/images/p7-web-server-1.png)
 
+2. Server 2 -  3.82.46.47
 ![](https://soms-public-assets.s3.amazonaws.com/images/p7-web-server-2.png)
