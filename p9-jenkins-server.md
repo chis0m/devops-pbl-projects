@@ -37,6 +37,7 @@ sudo apt-get install jenkins
 ![](https://soms-public-assets.s3.amazonaws.com/images/p9_github_webhook.png)
 
 The IP is the jenkins server public IP
+**Note**: Remember to add the `/` at the end  of the webhook url. If not you might get `302` response
 
 #### Setup a freestyle project on jenkins
 
