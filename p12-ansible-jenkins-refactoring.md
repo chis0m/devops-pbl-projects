@@ -222,4 +222,15 @@ After merging the PR against master
 10. Run `ansible-playbook -i /artifacts/ansible-config-artifact/inventory/uat.yml /artifacts/ansible-config-artifact/playbooks/site.yml`
     
 You should get something like this
-![](https://soms-public-assets.s3.amazonaws.com/images/p12-result.png)    
+![](https://soms-public-assets.s3.amazonaws.com/images/p12-result.png)
+
+Visit the two sites to also confirm
+```
+http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+
+http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+```
+
+The ansible architecture now looks like this
+
+![](https://soms-public-assets.s3.amazonaws.com/images/p12-ansible-architecture.png)
