@@ -77,6 +77,11 @@ paste the following
       yum:
         name: wireshark
         state: latest
+      register: result
+
+    - name: show debug result
+      debug:
+        msg: "{{ result }}"  
 
 - name: update LB server
   hosts: lb
