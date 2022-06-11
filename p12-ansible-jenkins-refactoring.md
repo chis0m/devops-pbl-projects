@@ -9,12 +9,12 @@ Refactoring - is making changes to the source code without changing expected beh
 ### Jenkins job Enhancement
 Our current jenkins job from project 11 creates a seperate directory like `/var/lib/jenkins/jobs/ansible/builds/<build-number>/archive` based on build number and stores artifacts
 
-1. Login to Jenkins-ansible server and create directory and `/`
-   1. ```bash
-      sudo mkdir -p /artifacts
-      sudo chmod -R 777 /artifacts
-      mkdir /artifacts/ansible-config-artifact 
-    ```
+1. Login to Jenkins-ansible server and create directory for artifacts `/artifacts`
+```bash
+sudo mkdir -p /artifacts
+sudo chmod -R 777 /artifacts
+mkdir /artifacts/ansible-config-artifact 
+```
 
 2. Goto Jenkins web console and install jenkins plugin `Copy Artifact`
 3. Create a new freestyle project called `save_artifacts`. This job will run after the `Ansible` job from project 11 is executed. And will move the most recent artifact to `/artifacts/ansible-config-artifact `. To setup the `save_artifacts`, go to `General > Discard Old Builds`, `Build Triggers > Build after other projects are built` and `Add Build Step`. The Image explains better
