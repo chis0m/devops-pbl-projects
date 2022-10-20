@@ -191,6 +191,7 @@ roles_path = /artifacts/ansible-config-artifact/roles
 ```
 
 6. create `static-assignments/uat-webservers.yml` and paste the following to **reference the webserver role**
+The static-assignments folder is where all other children playbooks will be stored. This is merely for easy organization of your work. 
 ```yml
 ---
 - hosts: uat-webservers
