@@ -310,3 +310,6 @@ Route53
 - TLS Certificate
 
 To be continued
+
+![](https://soms-public-assets.s3.amazonaws.com/images/p15-wordpress-app.png)
+![](https://soms-public-assets.s3.amazonaws.com/images/p15-tooling-app.png)
