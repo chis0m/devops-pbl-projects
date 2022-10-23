@@ -308,10 +308,10 @@ Route53
 - Wordpress App installation will be on EFS mount point
 - TLS Certificate
 - EFS
-  - Will be accessed by Proxy server and webserver(wordpress esp)
-  - Meaning we have to create EFS mount point on ther servers
+  - Will be accessed by webserver(wordpress esp)
+  - Meaning we have to create EFS mount point on ther servers (the AMI)
   - Associate the EFS to both subnets of the datalayer. This means the two AZ is now taken into account
-  - Create a dedicated SG for EFS to allow web and proxy server security groups
+  - Create database SG `MC-DatabaseEFS-SG` to allow port 2049 (for EFS), 3306 (for MYSQL). Source SGs should be `MC-Webserver-SG`
   - Leave everyother thing as default
 
 To be continued
