@@ -305,9 +305,14 @@ Route53
 
 #### Part 2
 - Setup Database Servers in `MC-Default-Subnet`
-- EFS Setup in `MC-WebserverPrivate-Subnet 1 & 2` must be in same subnet as the application connecting to it
-- Actually wordpress App installation and connection to EFS
+- Wordpress App installation will be on EFS mount point
 - TLS Certificate
+- EFS
+  - Will be accessed by Proxy server and webserver(wordpress esp)
+  - Meaning we have to create EFS mount point on ther servers
+  - Associate the EFS to both subnets of the datalayer. This means the two AZ is now taken into account
+  - Create a dedicated SG for EFS to allow web and proxy server security groups
+  - Leave everyother thing as default
 
 To be continued
 
