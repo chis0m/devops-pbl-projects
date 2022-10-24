@@ -160,7 +160,7 @@ Public/Internet Facing ALB
 - Select `internet facing`
 - Select correct VPC
 - Subnet: Slect the 2 AZs and` MC-PublicSubnet 1& 2` respectively
-- Security Group: Select the `MC-PublicALB SG`
+- Security Group: Select the `MC-PublicALB-SG`
 - Point port 80/443 to `MC-ProxyServer-TG`. But 443 will need SSL cert configuration so for now you can ignore it
 - Leave everything as default
 - Create LB
@@ -170,7 +170,7 @@ Webserver Private ALB
 - Select `internal`
 - Select correct VPC
 - Subnet: Slect the 2 AZs and`MC-WebserverPrivateSubnet 1 & 2` respectively
-- Security Group: Select the `MC-Webserver-SG`
+- Security Group: Select the `MC-PrivateALB-SG`
 - Point port 80 to `MC-WordpressAppServer-TG`. 443 will need SSL cert configuration so for now you can ignore it
 - Leave everything as default
 - Create LB
